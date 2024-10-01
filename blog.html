@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AF Tube || Blog</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/youtube.png" type="image/x-icon" />
+
+    <!-- Tailwind and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="ml-5 mr-5 mx-auto md:ml-10 md:mr-10 md:mx-auto lg:ml-28 lg:mr-28 lg:mx-auto"
+  >
+    <!-- Header -->
+    <header>
+      <nav
+        class="py-5 flex flex-row justify-between border-b-[2px] border-gray-300 items-center"
+      >
+        <!-- Left -->
+        <a
+          class="flex flex-row justify-center items-center gap-2 cursor-pointer"
+          href="./index.html"
+        >
+          <!-- <img src="./images/Logo.png" alt="" /> -->
+          <img class="w-10" src="./images/play-button.png" alt="" />
+          <h1 class="font-bold text-3xl">
+            <span class="text-[#FF1F3D]">AF</span> Tube
+          </h1>
+        </a>
+        <!-- Center -->
+        <div class="hidden">
+          <!-- onclick="sortByView()" -->
+          <button
+            id="sort-data-button"
+            class="btn rounded border-2 bg-gray-300 font-bold border-transparent hover:bg-[#FF1F3D] hover:text-white hover:border-[#FF1F3D]"
+          >
+            Sort by view
+          </button>
+        </div>
+        <!-- Right -->
+        <div class="">
+          <a
+            href="./blog.html"
+            class="btn rounded bg-[#FF1F3D] text-white border-2 border-transparent hover:bg-transparent hover:border-[#FF1F3D] hover:text-[#FF1F3D]"
+          >
+            Blog
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="mt-14">
+      <!-- Var -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is var in Js?</h1>
+        <p>
+          In JavaScript, var is one of the ways to declare variables. It was
+          introduced in ECMAScript 3 (ES3) and is still valid, though it has
+          some characteristics that differ from the modern let and const
+          keywords introduced in ECMAScript 6 (ES6). Here’s a breakdown of var:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+            <code>
+          console.log(x); // undefined, not ReferenceError
+          var x = 5;
+          console.log(x); // 5
+            </code></pre>
+        </div>
+      </div>
+
+      <!-- Let -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is let in Js?</h1>
+        <p>
+          In JavaScript, let is a keyword introduced in ECMAScript 6 (ES6) for
+          declaring variables. It offers several improvements over the older var
+          keyword, particularly in terms of scope and behavior. Here’s a
+          detailed overview of let and its features:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+            <code>
+          let y = 10;
+          console.log(y); // 10
+          let y = 20; // SyntaxError: Identifier 'y' has already been declared
+              
+            </code></pre>
+        </div>
+      </div>
+
+      <!-- Const -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What is const in Js?</h1>
+        <p>
+          In JavaScript, const is a keyword introduced in ECMAScript 6 (ES6) for
+          declaring variables that are meant to be constant, or immutable. While
+          const does not make the value itself immutable, it does ensure that
+          the variable identifier cannot be reassigned once it is set. Here’s a
+          detailed look at const and its features:
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+            <code>
+          const y = 10;
+          console.log(y); // 10
+          y = 20; // TypeError: Assignment to constant variable
+              
+            </code></pre>
+        </div>
+      </div>
+
+      <!-- Null and undefined  -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">
+          The use case of null and undefined in JS:
+        </h1>
+        <h3 class="font-bold text-2xl">null:</h3>
+        <p>
+          <span class="font-bold">null</span> is an assignment value that
+          represents the intentional absence of any object value. It is often
+          used to indicate that a variable should have no value or to signify
+          that a property or object has been intentionally left empty.
+        </p>
+        <ul class="list-disc pl-10">
+          <li>Represents the intentional absence of value.</li>
+          <li>Used to explicitly set or reset a variable to have no value.</li>
+          <li>
+            Indicates that an object property or function result is
+            intentionally left empty or not available.
+          </li>
+        </ul>
+
+        <!-- Undefined -->
+        <h3 class="mt-5 font-bold text-2xl">undefined:</h3>
+        <p>
+          <span class="font-bold">undefined</span> represents a variable that
+          has been declared but has not yet been assigned a value. It is also
+          the default value for function arguments that are not provided and for
+          properties that do not exist in objects.
+        </p>
+        <ul class="list-disc pl-10">
+          <li>Default for uninitialized variables.</li>
+          <li>Used for missing function arguments.</li>
+          <li>Indicates non-existent object properties or array elements. s</li>
+        </ul>
+      </div>
+
+      <!-- Rest API -->
+      <div class="border-2 rounded-lg px-5 py-5 shadow-xl mb-10">
+        <h1 class="font-bold text-3xl mb-2">What do you mean by REST API?</h1>
+        <p>
+          A REST API (Representational State Transfer Application Programming
+          Interface) is a set of rules and conventions for creating and
+          interacting with web services. It uses HTTP methods to enable
+          communication between clients and servers, allowing for the
+          manipulation and retrieval of resources.
+        </p>
+        <!-- Code -->
+        <div class="mockup-code mt-5">
+          <pre data-prefix="">
+            <code>
+          {
+              "name": "John Doe",
+              "email": "john.doe@example.com"
+          }
+            </code></pre>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
