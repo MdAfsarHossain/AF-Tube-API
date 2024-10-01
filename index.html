@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AF Tube</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/youtube.png" type="image/x-icon" />
+
+    <!-- Tailwind and DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="ml-5 mr-5 mx-auto md:ml-10 md:mr-10 md:mx-auto lg:ml-28 lg:mr-28 lg:mx-auto"
+  >
+    <!-- Header -->
+    <header>
+      <nav
+        class="py-5 flex flex-row justify-between border-b-[2px] border-gray-300 items-center"
+      >
+        <!-- Left -->
+        <a
+          class="flex flex-row justify-center items-center gap-2 cursor-pointer"
+          href="./index.html"
+        >
+          <!-- <img src="./images/Logo.png" alt="" /> -->
+          <img class="w-10" src="./images/play-button.png" alt="" />
+          <h1 class="font-bold text-3xl">
+            <span class="text-[#FF1F3D]">AF</span> Tube
+          </h1>
+        </a>
+        <!-- Center -->
+        <div class="hidden md:block">
+          <!-- onclick="sortByView()" -->
+          <button
+            id="sort-data-button"
+            class="btn rounded border-2 bg-gray-300 font-bold border-transparent hover:bg-[#FF1F3D] hover:text-white hover:border-[#FF1F3D]"
+          >
+            Sort by view
+          </button>
+        </div>
+        <!-- Right -->
+        <div class="">
+          <a
+            href="./blog.html"
+            class="btn rounded bg-[#FF1F3D] text-white border-2 border-transparent hover:bg-transparent hover:border-[#FF1F3D] hover:text-[#FF1F3D]"
+          >
+            Blog
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Categories -->
+      <section>
+        <div
+          id="catogories-container"
+          class="flex flex-row justify-center items-center gap-5 lg:gap-10 py-5"
+        >
+          <button
+            class="btn rounded bg-[#FF1F3D] text-white border-2 border-transparent hover:bg-transparent hover:border-[#FF1F3D] hover:text-[#FF1F3D]"
+          >
+            All
+          </button>
+          <button
+            class="btn rounded border-2 bg-gray-300 font-bold border-transparent hover:bg-[#FF1F3D] hover:text-white hover:border-[#FF1F3D]"
+          >
+            Music
+          </button>
+          <button
+            class="btn rounded border-2 bg-gray-300 font-bold border-transparent hover:bg-[#FF1F3D] hover:text-white hover:border-[#FF1F3D]"
+          >
+            Comedy
+          </button>
+          <button
+            class="btn rounded border-2 bg-gray-300 font-bold border-transparent hover:bg-[#FF1F3D] hover:text-white hover:border-[#FF1F3D]"
+          >
+            Drawing
+          </button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div
+          id="loading-spinner"
+          class="flex flex-row justify-center items-center py-10"
+        >
+          <span class="loading loading-spinner loading-lg text-success"></span>
+        </div>
+      </section>
+
+      <!-- Tube Section -->
+      <section class="mb-20 mt-5">
+        <!-- Cards Wrapper -->
+        <div
+          id="cards-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
+        >
+          <!-- Card-1 -->
+          <div class="card card-compact bg-base-100 shadow-xl border-t-2">
+            <figure class="w-full h-52 relative">
+              <img
+                class="h-full w-full"
+                src="https://i.ibb.co/L1b6xSq/shape.jpg"
+                alt="Shoes"
+              />
+              <div
+                class="absolute bg-gray-600 px-2 py-1 rounded bottom-2 right-2"
+              >
+                <p class="text-white text-sm">
+                  <span>3</span>hrs <span>56</span> min ago
+                </p>
+              </div>
+            </figure>
+
+            <div class="card-body">
+              <!-- Heading -->
+              <div class="flex flex-row justify-start items-center gap-3">
+                <!-- Avatar -->
+                <div class="avatar">
+                  <div class="w-12 rounded-full">
+                    <img src="https://i.ibb.co/D9wWRM6/olivia.jpg" />
+                  </div>
+                </div>
+                <!-- Title -->
+                <div class="">
+                  <h1 class="font-bold text-base">Shape of You</h1>
+                </div>
+              </div>
+
+              <!-- Author -->
+              <div class="flex flex-row justify-start items-center gap-2 pl-14">
+                <div class="">
+                  <h1 class="font-bold text-gray-600">Olivia Mitchell</h1>
+                </div>
+                <div class="w-6">
+                  <img src="./images/verify.png" alt="" />
+                </div>
+              </div>
+              <!-- Views -->
+              <div class="pl-14">
+                <h1 class="font-bold text-gray-600 views">
+                  <span>100K</span> views
+                </h1>
+              </div>
+              <!-- End of Views -->
+            </div>
+          </div>
+          <!-- End of Card-1 -->
+        </div>
+        <!-- Ends of cards wrapper -->
+
+        <!-- No data container -->
+        <div
+          id="no-data-container"
+          class="flex flex-col justify-center items-center gap-5 text-center"
+        ></div>
+        <!-- Ends of No data container -->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JS -->
+    <script src="./js/app.js"></script>
+  </body>
+</html>
